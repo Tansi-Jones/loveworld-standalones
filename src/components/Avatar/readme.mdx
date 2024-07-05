@@ -1,0 +1,56 @@
+/\*\*
+
+-
+- This component is used to create an avatar for ministry programs.
+- The code is a combination of Tailwind, TypeScript, and Next.js >v14.
+-
+- The component uses the react-cropper library to crop the image.
+- The cropped image is then placed on a flyer using the HTML canvas element.
+- It is required to install this library to use this component.
+- @see https://www.npmjs.com/package/react-cropper
+- Add the class style below to a CSS file to style the cropper.
+- .img-preview {
+- overflow: hidden;
+- }
+-
+- NOTE:
+- This component is design to be use with Next.js >v14, TypeScript and Tailwind CSS.
+- However, you can use it with any other framework or library such as React.
+- Just make sure to replace the following Next specific components
+- - Image component with the img tag (unoptimized,fill, quality & onLoad->onLoadComplete).
+- - "use client" should also be removed if you are not using Next.js.
+- Remove all tailwind classes and replace them with your own CSS classes.
+- Do not remove ".img-preview" class or any id as it is used by the cropper and canvas.
+-
+-
+- This component has 3 images:
+-
+- 1.  DEFAULT IMAGE
+- - The default image is displayed when the page loads and
+- it's required to have a size of less than 500KB to load fast.
+-
+- 2.  PREVIEW IMAGE
+- - The preview image should have a file size of less than 1MB.
+- - However, you can use thesame image as the flyer image.
+- - When you launch the component, the preview image is what is displayed on the right side.
+-
+- 3.  FLYER IMAGE
+- - The flyer image is the only image where the canvas draws the avatar on.
+- - It should have a file size of less than 5MB for best quality and faster download.
+- - The flyer image element is also hidden from the DOM.
+- - The flyer image element has an ID of "flyer" which should not be changed cause it's used by the canvas.
+- - The width and height of the flyer image should be left at 1.
+- - Keep the flyer image quality at 100 for best results.
+-
+- HOW TO USE
+-
+- 1.  Replace the all image sources with your own images.
+- 2.  (OPTIONAL) Adjust the canvas width and height to fit your design.
+- 3.  Make the canvas visible by removing the "hidden" attribute and
+- adjust the avatar size and X,Y position on the flyer to match your design.
+- 4.  (OPTIONAL) Change the avatar shape from a circle to a square by using the ctx.rect() method.
+- 5.  Add the "hidden" attribute back to the canvas element when everything looks great.
+- 6.  Locate the preview image div element with an ID "preview"
+- and adjust the avatar image position on the preview image using tailwind classes or vanilla CSS to.
+- 7.  (OPTIONAL) Adjust the styling of the component to match your design.
+- \*/

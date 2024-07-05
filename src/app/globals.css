@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+/* This style if for the avatar component, do not delete! */
+.img-preview {
+  overflow: hidden;
+}
